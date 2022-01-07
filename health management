@@ -1,0 +1,87 @@
+print("Welcome to Health Management System")
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+client_name = ("harry","rohan","hammad")
+enter_work = int(input("1 for log and 2 for retrieve \n"))
+enter_name = int(input("1 for harry, 2 for rohan and 3 for hammad \n"))
+# print ("enter which data:")
+enter_job = int(input ("1 for diet and 2 for exercise \n"))
+if enter_work == 1:
+    if enter_name == 1:
+        if enter_job == 1:
+            with open("harrydiet.txt", "a") as Hyd:
+                a = input("what did harry ate:")
+                # write1 =
+                Hyd.write("[" + str(getdate()) + "] " + a + "\n")
+        elif enter_job == 2:
+            with open("harryexer.txt", "a") as Hye:
+                b = input("what did harry exercise: ")
+                # write2 = \
+                Hye.write("[" + str(getdate()) + "] " + b + "\n")
+        else:
+            print("error! enter the correct value")
+    elif enter_name == 2:
+        if enter_job == 1:
+            with open("rohandiet.txt", "a") as rd:
+                c = input("what did rohan ate:")
+                # write3 = \
+                rd.write("[" + str(getdate()) + "] " + c + "\n")
+        elif enter_job == 2:
+            with open("rohanexer.txt", "a") as re:
+                d = input("what did rohan exercise: ")
+                write4 = re.write("[" + str(getdate()) + "] " + d + "\n")
+        else:
+            print("error! enter the correct value")
+    elif enter_name == 3:
+        if enter_job == 1:
+            with open("hammaddiet.txt", "a") as hd:
+                e = input("what did hammad ate:")
+                write5 = hd.write("[" + str(getdate()) + "] " + e + "\n")
+        elif enter_job == 2:
+            with open("hammadexer.txt", "a") as he:
+                f = input("what did hammad exercise: ")
+                write6 = he.write("[" + str(getdate()) + "] " + f + "\n")
+        else:
+            print("error! enter the correct value")
+    else:
+        print("error! enter the correct value")
+
+elif enter_work==2:
+    if enter_name == 1:
+        if enter_job == 1:
+            with open("harrydiet.txt",) as Hyd:
+                for i in Hyd:
+                    print (i, end ="")
+        elif enter_job == 2:
+            with open("harryexer.txt", ) as Hyd:
+                for i in Hyd:
+                    print(i, end="")
+        else:
+            print("error! enter the correct value")
+    elif enter_name == 2:
+        if enter_job == 1:
+            with open("rohandiet.txt", ) as Hyd:
+                for i in Hyd:
+                    print(i, end="")
+        elif enter_job == 2:
+            with open("rohanexer.txt", ) as Hyd:
+                for i in Hyd:
+                    print(i, end="")
+        else:
+            print("error! enter the correct value")
+    elif enter_name == 3:
+        if enter_job == 1:
+            with open("hammaddiet.txt", ) as Hyd:
+                for i in Hyd:
+                    print(i, end="")
+        elif enter_job == 2:
+            with open("hammadexer.txt", ) as Hyd:
+                for i in Hyd:
+                    print(i, end="")
+        else:
+            print("error! enter the correct value")
+    else:
+        print("error! enter the correct value")
+else:
+    print("error! enter the correct value")
